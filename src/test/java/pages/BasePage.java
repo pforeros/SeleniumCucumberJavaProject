@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -46,7 +47,23 @@ public class BasePage {
     Find(locator).sendKeys(textToWrite);
 
   }
+  public void selectFromDropdownByValue (String locator, String ValueToSelect){
+    Select dropdown = new Select (Find(locator));
+    dropdown.selectByValue(ValueToSelect);
+  }
+
+    public void selectFromDropdownByIndex(String locator, int ValueToSelect){
+      Select dropdown = new Select (Find(locator));
+      dropdown.selectByIndex(ValueToSelect); 
+
+  }
+  public void selectFromDropdownByText(String locator, String ValueToSelect){
+    Select dropdown = new Select (Find(locator));
+    dropdown.selectByVisibleText(ValueToSelect); 
+
+  }
 }
+
 
     
     
