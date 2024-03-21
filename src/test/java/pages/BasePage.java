@@ -76,6 +76,20 @@ public class BasePage {
   public void rightClickElement(String locator){
         action.contextClick(Find(locator));
   }
+
+  public String getValueFromTable(String locator, int row, int column) {
+    // Encadenamos junto con el `locator` lo requerido para el dato en cuestión
+    String cellINeed = locator + "/table/tbody/tr[" + row + "]/td [" + column + "]";
+    // Devolvemos el texto interno
+    return Find(cellINeed).getText();
+  }
+
+  public void setValueOnTable(String locator, int row, int column, String stringToSend){
+    // Encadenamos junto con el `locator` lo requerido para el dato en cuestión
+    String cellToFill = locator + "/table/tbody/tr[" + row + "]/td [" + column + "]";
+    // Llenamos la celda
+    Find(cellToFill).sendKeys(stringToSend);
+ }
 }
 
 
