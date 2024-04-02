@@ -2,6 +2,8 @@ package pages;
 
 public class GridPage extends BasePage {
     String grid = "//*[@id='root']/div/";
+    //private String cell = "//*[@id='root']/div/";
+    private String mainTable = "//*[@id='root']/div/table";
 
   // Usamos el Contructor del padre
   public GridPage(){
@@ -15,6 +17,10 @@ public class GridPage extends BasePage {
 
   public String getValueFromGrid(int row, int col) {
     return getValueFromTable(grid, row, col);
+  }
+
+  public boolean cellStatus(){
+    return elementisDisplayed(mainTable);
   }
 }
 
