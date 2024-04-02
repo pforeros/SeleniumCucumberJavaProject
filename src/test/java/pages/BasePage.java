@@ -90,7 +90,20 @@ public class BasePage {
     // Llenamos la celda
     Find(cellToFill).sendKeys(stringToSend);
  }
+
+ public void switchToiFrame(int iFrameIndex){
+  driver.switchTo().frame(iFrameIndex);
+ }
+
+ public void swithcToParentFrame(){
+    driver.switchTo().parentFrame();
 }
+
+public void dismissAlert(){
+  driver.switchTo().alert().dismiss();
+}
+}
+
 
 
     
