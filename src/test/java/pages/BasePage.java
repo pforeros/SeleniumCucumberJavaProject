@@ -106,7 +106,19 @@ public void dismissAlert(){
 public String textFromElement(String locator){
   return Find(locator).getText();
 }
+
+public boolean elementisDisplayed (String locator){
+  return Find (locator).isDisplayed();
 }
+
+public boolean elementIsEnabled(String locator){
+  return Find(locator).isEnabled();
+}
+public boolean elementIsSelected(String locator){
+  return Find(locator).isSelected();
+}
+}
+
 
 
 
