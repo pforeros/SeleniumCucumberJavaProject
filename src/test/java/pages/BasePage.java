@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -117,6 +118,10 @@ public boolean elementIsEnabled(String locator){
 public boolean elementIsSelected(String locator){
   return Find(locator).isSelected();
 }
+
+public List<WebElement> bringMeAllElements(String locator){
+    return driver.findElements(By.className(locator));
+  }
 }
 
 
