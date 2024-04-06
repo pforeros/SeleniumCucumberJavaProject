@@ -2,6 +2,7 @@ package pages;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.WebElement;
 
@@ -21,8 +22,14 @@ public void navigateToListPage() {
   }  
 
 public void enterSearchCriteria() throws InterruptedException {
+  try{
     Thread.sleep(600);
     write(searchField, "Washington");
+  }catch(NoSuchElementException e){
+    System.out.println("The webelement search field couldnot be found");
+    e.printStackTrace();
+  }
+
   }
 public List<String> getAllSearchResults() {
     // Traigo WebElements de Selenium
