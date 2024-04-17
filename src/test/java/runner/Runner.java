@@ -14,7 +14,7 @@ import pages.BasePage;
     glue = "steps",
     //tags = "@Test"
     monochrome = true,
-    tags = "@Grid"
+    tags = "@List"
 )
 
 public class Runner{

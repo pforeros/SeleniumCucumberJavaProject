@@ -21,10 +21,10 @@ public void navigateToListPage() {
    navigateTo("https://digitalmarketingwebdesign.com/complete-list-us-cities-cities-united-states/");
   }  
 
-public void enterSearchCriteria() throws InterruptedException {
+public void enterSearchCriteria(String state) throws InterruptedException {
   try{
     Thread.sleep(600);
-    write(searchField, "Washington");
+    write(searchField, state);
   }catch(NoSuchElementException e){
     System.out.println("The webelement search field couldnot be found");
     e.printStackTrace();
