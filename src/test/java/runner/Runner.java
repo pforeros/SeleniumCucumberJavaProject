@@ -13,6 +13,9 @@ import pages.BasePage;
     //glue = "src/test/java/steps"
     glue = "steps",
     //tags = "@Test"
+    plugin = {"pretty",
+      "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+      "timeline:test-output-thread/" },
     monochrome = true,
     tags = "@List"
 )
