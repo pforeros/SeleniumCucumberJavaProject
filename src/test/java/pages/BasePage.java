@@ -131,7 +131,12 @@ public boolean elementIsSelected(String locator){
 public List<WebElement> bringMeAllElements(String locator){
     return driver.findElements(By.className(locator));
   }
+
+public void goToLinkText(String linkText) {
+    driver.findElement(By.linkText(linkText)).click();
 }
+}
+
 
 
 
