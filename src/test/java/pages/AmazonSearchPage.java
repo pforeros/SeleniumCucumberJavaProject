@@ -21,7 +21,7 @@ public class AmazonSearchPage extends BasePage {
         super(driver);
     }
     public void navigateToAmazon(){
-        navigateTo("https://www.amazon.com");
+        navigateTo("https://www.amazon.com/gp/homepage.html/?ref=wt_urltypo/");
         }
 
     public void enterSearchCriteria(String criteria){
